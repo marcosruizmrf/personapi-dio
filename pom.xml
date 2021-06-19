@@ -61,11 +61,9 @@
 
 	<build>
 		<plugins>
-
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<excludes>
 						<exclude>
@@ -74,19 +72,6 @@
 						</exclude>
 					</excludes>
 				</configuration>
-				<plugin>
-					<groupId>com.heroku.sdk</groupId>
-					<artifactId>heroku-maven-plugin</artifactId>
-					<version>3.0.3</version>
-					<failOnNoGitDirectory>false</failOnNoGitDirectory>
-				</plugin>
-				<plugin>
-					<groupId>p1.project13.maven</groupId>
-					<artifactId>git-commit-id-plugin</artifactId>
-					<configuration>
-						<failOnNoGitDirectory>false</failOnNoGitDirectory>
-					</configuration>
-				</plugin>
 			</plugin>
 		</plugins>
 	</build>
