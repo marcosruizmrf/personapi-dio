@@ -7,8 +7,6 @@ import java.util.List;
 
 @Entity
 @Data
-@Setter
-@Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -29,6 +27,7 @@ public class Person {
 
     private LocalDate birthDate;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @OneToMany(mappedBy = "phone", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<Phone> phones;
+
 }
