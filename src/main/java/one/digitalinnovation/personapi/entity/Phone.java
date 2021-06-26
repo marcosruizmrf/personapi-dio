@@ -19,6 +19,7 @@ public class Phone {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Enumerated
     @Column(nullable = false)
     private PhoneType type;
 
@@ -26,7 +27,7 @@ public class Phone {
     private String number;
 
     @ManyToOne
-    @JoinColumn(name = "phone_id")
+    @JoinColumn(name = "person_id")
     private Phone phone;
 
 }
